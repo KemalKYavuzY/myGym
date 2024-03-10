@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - myGym</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-secondary-color">
+
+    <section class="section__container">
+        <h2 class="section__header">Contact Us</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+    
+        <br><br><br>
+    
+        <!-- Add this div to your HTML for dynamic team information -->
+        <h2 class="section__header">Team Contact Information</h2>
+        <div class="contact-card-container" id="team-container"></div>
+      </section>
+
+  <script src="contact.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      // Add any validation or data handling here if necessary
+      window.location.href = 'index.html'; // Redirect to the main page
+    });
+    </script>
+</body>
+</html>
